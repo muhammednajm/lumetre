@@ -26,6 +26,11 @@ import { animationLoop } from './animation-loop'
 	*/
 	const game = {
 		clock: new Clock(),
+		/*
+			Keyboard states
+		*/
+		downKeys: {},
+		upKeys: {},
 	}
 
 	/*

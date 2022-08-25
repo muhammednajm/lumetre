@@ -13,4 +13,7 @@ export function listen( { renderer, scene, camera, }, game ) {
 		camera.aspect = width / height
 		camera.updateProjectionMatrix()
 	} )
+
+	window.addEventListener('keydown', e => game.downKeys[e.code] = true)
+	window.addEventListener('keyup', e => game.downKeys[e.code] = false)
 }
