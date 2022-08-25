@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lumetre</title>
+		<style type="text/css">
+			:root {
+				color-scheme: light dark;
+				font-synthesis: none;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-text-size-adjust: 100%;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-tap-highlight-color: transparent;
+			}
+			html,
+			body {
+				overscroll-behavior-y: contain;
+				overflow-x: hidden;
+			}
+			#scene-container {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				width: calc(100vw - 2rem);
+				height: calc(100vh - 2rem);
+				margin-top: 1rem;
+				margin-left: 1rem;
+			}
+			#scene-container canvas {
+				width: 100%;
+				height: 100%;
+				border-radius: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="scene-container">
+			<canvas></canvas>
+		</div>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
