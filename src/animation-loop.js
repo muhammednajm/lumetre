@@ -40,6 +40,6 @@ function updateControls( camera, game, deltaTime ) {
 	}
 	
 	const offset = ( new THREE.Vector3( 0, 0, 3 ) ).applyMatrix4( game.target.matrixWorld )
-	camera.position.lerp( offset, 0.25 )
+	camera.position.lerp( offset, 0.1 )
 	camera.lookAt( game.target.position )
 }

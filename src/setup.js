@@ -12,7 +12,7 @@ export function Renderer() {
 	const height = container.clientHeight
 	const aspect = width / height
 
-	const renderer = new THREE.WebGLRenderer( { canvas, } )
+	const renderer = new THREE.WebGLRenderer( { canvas, antialias: true, } )
 
 	renderer.setPixelRatio( window.devicePixelRatio )
 	renderer.setSize( width, height )
@@ -26,6 +26,13 @@ export function Renderer() {
 export function Scene() {
 
 	const scene = new THREE.Scene()
+	scene.background = new THREE.Color( 0xe0e0e0 )
+
+	{
+		const color = 0xe0e0e0
+		const density = 0.005
+		scene.fog = new THREE.FogExp2( color, density )
+	}
 
 	return scene
 }
