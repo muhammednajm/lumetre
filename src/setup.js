@@ -26,13 +26,7 @@ export function Renderer() {
 export function Scene() {
 
 	const scene = new THREE.Scene()
-	scene.background = new THREE.Color( 0xe0e0e0 )
-
-	{
-		const color = 0xe0e0e0
-		const density = 0.005
-		scene.fog = new THREE.FogExp2( color, density )
-	}
+	scene.background = new THREE.Color( 0xffffff )
 
 	return scene
 }
@@ -48,11 +42,11 @@ export function Camera( { renderer, scene, } ) {
 	const fov = 45
 	const aspect = width / height
 	const near = 0.1
-	const far = 100
+	const far = 10000
 
 	const camera = new THREE.PerspectiveCamera( fov, aspect, near, far )
 
-	camera.position.set( 0, 0, 5 )
+	camera.position.set( 0, 10, 300 )
 	camera.lookAt( scene.position )
 
 	return camera

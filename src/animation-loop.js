@@ -23,7 +23,7 @@ export function animationLoop( setup, game ) {
 */
 function updateControls( camera, game, deltaTime ) {
 
-	const move = 10 * deltaTime
+	const move = 50 * deltaTime
 	const angle = Math.PI * deltaTime
 
 	if ( game.downKeys.KeyW ) {
@@ -37,6 +37,13 @@ function updateControls( camera, game, deltaTime ) {
 	}
 	if ( game.downKeys.KeyD ) {
 		game.target.rotateOnAxis( new THREE.Vector3( 0, 1, 0 ), - angle )
+	}
+
+	if ( game.downKeys.ArrowUp ) {
+		game.target.rotateOnAxis( new THREE.Vector3( 1, 0, 0 ), - angle )
+	}
+	if ( game.downKeys.ArrowDown ) {
+		game.target.rotateOnAxis( new THREE.Vector3( 1, 0, 0 ), angle )
 	}
 	
 	const offset = ( new THREE.Vector3( 0, 0, 3 ) ).applyMatrix4( game.target.matrixWorld )
